@@ -1,4 +1,4 @@
-package wordle;
+//package wordle;
 
 import java.io.*;
 import java.net.*;
