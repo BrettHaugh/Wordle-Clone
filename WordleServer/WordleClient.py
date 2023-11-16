@@ -54,7 +54,7 @@ class WordleClientGUI:
     def connect_to_server(self):
         try:
             self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            self.s.connect(('10.23.112.16', 1234))  # Replace with actual server IP and port
+            self.s.connect(('10.23.112.18', 1234))  # Replace with actual server IP and port
             self.connection_established = True
         except ConnectionRefusedError:
             messagebox.showerror("Connection Error", "Could not connect to the server.")
