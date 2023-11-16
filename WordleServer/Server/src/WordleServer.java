@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class WordleServer {
     private static final int PORT = 1234;
-    private static final String[] WORDS = {"apple", "banjo", "crane", "dwarf", "eagle"};
+    //private static final String[] WORDS = {"apple", "banjo", "crane", "dwarf", "eagle"};
     private static String secretWord;
     private static ServerSocket serverSocket;
 
@@ -37,7 +37,8 @@ public class WordleServer {
 
     private static void selectRandomWord() {
         Random rand = new Random();
-        secretWord = WORDS[rand.nextInt(WORDS.length)];
+        File file = new File("Words.txt");
+        secretWord = new Scanner(file);
     }
 
     private static String generateFeedback(String guess) {
